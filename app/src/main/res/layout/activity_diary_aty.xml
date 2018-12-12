@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.hulianhujia.spellway.activitys.DiaryAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:tint="#333"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:text="日记详情"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/shouye_logo"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/btCollect"
+            android:textColor="#333"
+            android:src="@mipmap/ic_collect"
+            android:textSize="15sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-22dp"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/editLo"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+            <EditText
+                android:id="@+id/etMessage"
+                android:paddingLeft="15dp"
+                android:background="@drawable/send_shape_new"
+                android:layout_width="0dp"
+                android:hint="说点什么"
+                android:textColorHint="#999"
+                android:textSize="12sp"
+                android:textColor="#333"
+                android:layout_weight="7"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="31dp" />
+            <TextView
+                android:id="@+id/btSend"
+                android:text="发送"
+                android:textSize="14sp"
+                android:background="#ededed"
+                android:textColor="#333"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="31dp" />
+        </LinearLayout>
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listView"
+            android:layout_above="@id/editLo"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrHeaderBackground="#fff"
+            ptr:ptrHeaderTextColor="#333"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+    </RelativeLayout>
+
+</RelativeLayout>

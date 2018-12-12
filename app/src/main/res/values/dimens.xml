@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="indector">10dp</dimen>
+    <dimen name="imgsize">30dp</dimen>
+    <dimen name="bar_height">64dp</dimen>
+    <dimen name="height">44dp</dimen>
+</resources>

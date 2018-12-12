@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context="com.hulianhujia.spellway.activitys.GradeAppAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:tint="#333"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:text="应用评分"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/shouye_logo"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <com.iarcuschin.simpleratingbar.SimpleRatingBar
+        android:id="@+id/rating"
+        android:layout_below="@id/loTitle"
+        android:layout_marginTop="80dp"
+        app:srb_maxStarSize="40dp"
+        app:srb_stepSize="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/grade"
+        android:text="差评"
+        android:layout_below="@id/rating"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        android:textColor="#333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/btCommit"
+        android:text="提交"
+        android:layout_below="@id/grade"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="#333"
+        android:background="@drawable/comfirm_time"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp" />
+</RelativeLayout>

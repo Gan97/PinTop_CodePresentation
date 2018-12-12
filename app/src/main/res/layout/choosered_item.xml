@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/dv1"
+        android:background="#F1F1F1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <RelativeLayout
+        android:layout_below="@+id/dv1"
+        android:id="@+id/rl_useless"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+        <CheckBox
+            android:id="@+id/isChecked"
+            android:buttonTint="#333"
+            android:clickable="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/img"
+            android:layout_toRightOf="@id/isChecked"
+            android:src="@mipmap/ic_redbag"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/isOver"
+            android:src="@mipmap/ic__past"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/redContent"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/redPrice"
+            android:text="￥5元"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/img"
+            android:textColor="#FE5454"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/redContent"
+            android:text="消费满100使用"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="11dp"
+            android:textSize="14sp"
+            android:textColor="@color/zitiColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/redTime"
+            android:text="2017.01.01"
+            android:textSize="12sp"
+            android:layout_marginTop="37dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#999999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="过期时间"
+            android:layout_toLeftOf="@+id/redTime"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="37dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

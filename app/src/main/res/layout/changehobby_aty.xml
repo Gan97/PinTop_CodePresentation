@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+        <ImageView
+            android:id="@+id/btExit"
+            android:src="@drawable/back"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="更改爱好"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="#333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/btSave"
+            android:text="完成"
+            android:textColor="#333"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    <EditText
+        android:id="@+id/etNick"
+        android:background="@drawable/bg_et"
+        android:textColor="#333"
+        android:maxEms="15"
+        android:hint="爱好"
+        android:textColorHint="#999"
+        android:textSize="14sp"
+        android:paddingLeft="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</LinearLayout>

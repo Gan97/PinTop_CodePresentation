@@ -1,0 +1,68 @@
+[
+    {
+        "outputFile": "F:\\DVP\\spell_way\\PinTu\\swipelistview\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1195,
+                    "endColumn": 50,
+                    "endOffset": 1241
+                },
+                "from": {
+                    "file": "F:\\DVP\\spell_way\\PinTu\\swipelistview\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1195,
+                        "endColumn": 50,
+                        "endOffset": 1241
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1246,
+                    "endLine": 23,
+                    "endColumn": 12,
+                    "endOffset": 1532
+                },
+                "from": {
+                    "file": "F:\\DVP\\spell_way\\PinTu\\swipelistview\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1246,
+                        "endLine": 23,
+                        "endColumn": 12,
+                        "endOffset": 1532
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1537,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1692
+                },
+                "from": {
+                    "file": "F:\\DVP\\spell_way\\PinTu\\swipelistview\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1537,
+                        "endLine": 26,
+                        "endColumn": 12,
+                        "endOffset": 1692
+                    }
+                }
+            }
+        ]
+    }
+]

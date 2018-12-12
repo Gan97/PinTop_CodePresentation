@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hulianhujia.spellway.MainActivity">
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_alignParentBottom="true"
+        android:background="#222"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RadioGroup
+            android:id="@+id/rgHomeTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/bt_home"
+                style="@style/tab_menu_item"
+                android:checked="true"
+                android:textSize="10sp"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_home_selector"
+                android:textColor="@drawable/radio_text_check"
+                android:text="首页" />
+            <RadioButton
+                android:id="@+id/bt_community"
+                style="@style/tab_menu_item"
+                android:textSize="10sp"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_community_selector"
+                android:textColor="@drawable/radio_text_check"
+                android:text="社区" />
+            <RadioButton
+                android:id="@+id/bt_guide"
+                style="@style/tab_menu_item"
+                android:textSize="10sp"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_guide_selector"
+                android:textColor="@drawable/radio_text_check"
+                android:text="导游" />
+
+            <RadioButton
+                android:id="@+id/bt_mine"
+                style="@style/tab_menu_item"
+                android:textSize="10sp"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_mime_selector"
+                android:textColor="@drawable/radio_text_check"
+                android:text="我的" />
+
+        </RadioGroup>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/rp"
+        android:layout_above="@id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+</RelativeLayout>

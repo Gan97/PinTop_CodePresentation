@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#f8f8f8"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    >
+    <TextView
+        android:id="@+id/tv_useless_other"
+        android:background="#f8f8f8"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <RelativeLayout
+        android:id="@+id/lo"
+        android:background="#fff"
+        android:elevation="1dp"
+        android:layout_below="@id/tv_useless_other"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/backk"
+            android:layout_alignBottom="@+id/front"
+            android:layout_alignTop="@+id/front"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:background="#F13E32"
+                android:text="删除"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:layout_width="75dp"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/front"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/iconLo"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="18dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guiderIcon"
+                    android:layout_width="51dp"
+                    android:layout_height="51dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/guiderSex"
+                    android:elevation="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:layout_alignTop="@+id/iconLo"
+                android:layout_toRightOf="@+id/iconLo"
+                android:layout_toEndOf="@+id/iconLo"
+                android:layout_marginStart="13dp" />
+
+            <TextView
+                android:id="@+id/guiderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/name"
+                android:layout_marginTop="1dp"
+                android:textColor="#666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/name"
+                android:layout_below="@id/name"
+                android:layout_marginTop="6dp"
+                android:text="导游费 :"
+                android:textColor="#333"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/guiderPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/price"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@id/price"
+                android:textColor="#F6554A"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/hourPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/name"
+                android:layout_below="@id/price"
+                android:layout_marginTop="2dp"
+                android:text="时长费 :"
+                android:textColor="#333"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/guiderHourPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/hourPrice"
+                android:layout_toRightOf="@id/hourPrice"
+                android:layout_marginLeft="4dp"
+                android:textColor="#F6554A"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imageView_useless_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iconLo"
+                android:layout_alignStart="@+id/iconLo"
+                android:layout_below="@+id/iconLo"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/goldp" />
+
+
+            <TextView
+                android:id="@+id/guiderType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iconLo"
+                android:layout_alignStart="@+id/iconLo"
+                android:layout_below="@+id/iconLo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#FF6C00"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/guiderTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="31dp"
+                android:text="导游已接单"
+                android:textColor="#F6554A"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/text_useless"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/front"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#f0f0f0" />
+        <TextView
+            android:textColor="#333"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_below="@+id/text_useless"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/guiderMotto"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="12dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#999"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:background="#dbdbdb"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

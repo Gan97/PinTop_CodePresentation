@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/btExit"
+        android:src="@mipmap/ic_closed"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="314dp"
+        android:layout_below="@id/btExit"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="12dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="12dp"
+        android:background="@drawable/settime_border"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv1"
+            android:text="选择预约时间"
+            android:textColor="#333"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@id/tv1"
+            android:background="@drawable/y_c"
+            android:layout_marginRight="10dp"
+            android:layout_width="5dp"
+            android:layout_height="5dp" />
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/tv1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/y_c"
+            android:layout_width="5dp"
+            android:layout_height="5dp" />
+        <TextView
+            android:id="@+id/tv2"
+            android:text="开始时间"
+            android:textColor="#333"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/lo"
+            android:layout_below="@id/tv2"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/or_s"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+            <TextView
+                android:id="@+id/date"
+                android:text="07-12"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp" />
+            <TextView
+                android:id="@+id/time"
+                android:text="14:00"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/btCommit"
+            android:text="确认预约"
+            android:textColor="#333"
+            android:gravity="center"
+            android:background="@drawable/comfirm_time"
+            android:layout_below="@id/lo"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+</RelativeLayout>

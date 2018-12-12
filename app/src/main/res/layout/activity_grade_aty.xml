@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context="com.hulianhujia.spellway.activitys.GradeAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:tint="#333"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:text="评价"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/shouye_logo"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lo"
+        android:background="#fff"
+        android:paddingBottom="30dp"
+        android:paddingTop="12dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+        <TextView
+            android:id="@+id/dv"
+            android:layout_below="@id/userIcon"
+            android:background="#dbdbdb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+        <LinearLayout
+            android:id="@+id/lo1"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/dv"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/ratingBar"
+                android:rating="5"
+                app:srb_starBackgroundColor="#999"
+                app:srb_drawBorderEnabled="false"
+                app:srb_starsSeparation="1dp"
+                android:stepSize="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lvl"
+            android:text="差评"
+            android:textColor="#333"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/lo1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etContent"
+            android:textColor="#333"
+            android:hint="亲，导游如何，对导游服务还满意吗？"
+            android:textColorHint="#bcbcbc"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:gravity="start"
+            android:background="@drawable/grade_et"
+            android:layout_below="@id/lvl"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="115dp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/btCommit"
+        android:layout_below="@id/lo"
+        android:layout_marginTop="43dp"
+        android:text="提交"
+        android:gravity="center"
+        android:textColor="#333"
+        android:background="@drawable/commit_shape"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+</RelativeLayout>

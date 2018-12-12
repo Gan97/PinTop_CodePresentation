@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/lo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+    <TextView
+        android:background="#F1F1F1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/user_iv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:src="@mipmap/mamamiya" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/userIcon"
+            android:text="创世者"
+            android:textColor="#845800"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/image_useless"
+            android:layout_width="7dp"
+            android:layout_height="9dp"
+            android:layout_alignLeft="@+id/userName"
+            android:layout_below="@+id/userName"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/daoyouxuanze_juli" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/image_useless"
+            android:text="醉美泸州"
+            android:textColor="#999"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tvHowLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="10dp"
+            android:text="10分钟以前"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+   <!-- <View
+        android:layout_marginTop="5dp"
+        android:layerType="software"
+        android:background="@drawable/dash_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />-->
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_marginTop="10dp"
+        android:text="正所谓文体不分家，如今很多运动员都跨界娱乐圈，成为了文体双栖明星，像孙杨、张继科、邹市明都在比赛训练的同时，不忘参加综艺节目的录制，继赚了钱，提高了人气，还顺便推广了体育项目，真是一举多得。"
+        android:textColor="#333"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/nineGrideView"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:ngv_gridSpacing="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/talkNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/pinglun"
+            android:drawablePadding="5dp"
+            android:text="30"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/likeNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/gerenxinxi_aihao"
+            android:drawablePadding="5dp"
+            android:text="50"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/pay_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/xiangqing_guanzhu"
+            android:drawablePadding="5dp"
+            android:text="关注"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btInvite"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="11dp"
+            android:gravity="center"
+            android:background="@drawable/buleboder"
+            android:drawableLeft="@mipmap/xiangqing_yaoqing"
+            android:padding="5dp"
+            android:text="邀请旅游"
+            android:textColor="#FF7070"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:background="#F1F1F1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:id="@+id/comment_rl"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/commentUserName"
+            android:text="李小龙:"
+            android:textColor="#789123"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/commentContent"
+            android:textColor="#333"
+            android:layout_toRightOf="@id/commentUserName"
+            android:layout_marginLeft="2dp"
+            android:text="敢不敢跟我打一锤"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:text="......"
+        android:textColor="#333"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:background="#dbdbdb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</LinearLayout>

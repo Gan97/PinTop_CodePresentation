@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="com.hulianhujia.spellway.activitys.CommunityDetailAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:tint="#333"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:text="动态详情"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/shouye_logo"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/loTitle"
+        android:layout_marginTop="-25dp"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/bottomBar"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+            <TextView
+                android:background="#dbdbdb"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+            <EditText
+                android:textColor="#333"
+                android:hint="说点什么?"
+                android:textColorHint="#999"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"
+                android:id="@+id/etContent"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/send_border"
+                android:layout_centerVertical="true"
+                android:layout_width="276dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/btSendComment"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#333"
+                android:text="发送"
+                android:gravity="center"
+                android:background="#ededed"
+                android:layout_width="70dp"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:layout_above="@id/bottomBar"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrHeaderBackground="#f1f1f1"
+            ptr:ptrHeaderTextColor="#333"
+            android:id="@+id/communityDetailCommentListView"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</RelativeLayout>

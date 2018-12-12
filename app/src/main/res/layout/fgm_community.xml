@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar_height"
+            android:background="@drawable/topbar">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:text="社区"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:layout_alignParentBottom="true"
+                android:src="@mipmap/shouye_logo"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@+id/btPub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="11dp"
+                android:src="@drawable/edit" />
+        </RelativeLayout>
+
+        <TextView
+            android:background="#dbdbdb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/communityRecyclerView"
+                android:background="#fff"
+                android:divider="@null"
+                ptr:ptrAnimationStyle="flip"
+                ptr:ptrHeaderBackground="#f1f1f1"
+                ptr:ptrHeaderTextColor="#333"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+    </LinearLayout>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorName="LineSpinFadeLoaderIndicator"
+        app:indicatorColor="#FF7070"
+        />
+</RelativeLayout>

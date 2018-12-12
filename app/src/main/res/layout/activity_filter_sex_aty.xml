@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f1f1f1"
+    android:layout_height="match_parent"
+    tools:context="com.hulianhujia.spellway.activitys.FilterSexAty">
+    <RelativeLayout
+        android:id="@+id/a"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/btExit"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="筛选"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/btSave"
+            android:text="保存"
+            android:textSize="15sp"
+            android:textColor="#333"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et"
+        android:hint="请输入“男”或“女”"
+        android:textSize="15sp"
+        android:paddingLeft="15dp"
+        android:layout_below="@id/a"
+        android:textColorHint="#999"
+        android:textColor="#333"
+        android:background="#fff"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+</RelativeLayout>

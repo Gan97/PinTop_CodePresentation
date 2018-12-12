@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.hulianhujia.spellway.activitys.guider.GuideWalletAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:background="#464D51"
+        android:layout_width="match_parent"
+        android:layout_height="192dp">
+        <ImageView
+            android:id="@+id/btExit"
+            android:src="@drawable/back"
+            android:tint="#fff"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="我的钱包"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="135dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/btDetail"
+            android:textColor="#fff"
+            android:text="明细"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv1"
+            android:text="账户余额"
+            android:textColor="#fff"
+            android:layout_marginBottom="84dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/money"
+            android:textColor="#FAEC5F"
+            android:textSize="36sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="36dp"
+            android:layout_alignLeft="@id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="97dp">
+        <TextView
+            android:background="#f1f1f1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <RelativeLayout
+            android:id="@+id/btCash"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <TextView
+                android:text="提现"
+                android:textColor="#333"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:drawablePadding="8dp"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@mipmap/ic_tixian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

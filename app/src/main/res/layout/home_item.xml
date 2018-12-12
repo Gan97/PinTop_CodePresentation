@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:paddingTop="15dp"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userIcon"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="10dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+    <TextView
+        android:id="@+id/userNick"
+        android:text="可可爱旅游"
+        android:textColor="#333"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="6dp"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/userIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/itemBack"
+        android:layout_below="@id/userNick"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="190dp" />
+    <ImageView
+        android:id="@+id/shadowBack"
+        android:src="@mipmap/shadow"
+        android:scaleType="fitXY"
+        android:layout_alignLeft="@id/itemBack"
+        android:layout_alignRight="@id/itemBack"
+        android:layout_alignBottom="@id/itemBack"
+        android:layout_alignTop="@+id/itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/itemTitle"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:layout_alignRight="@id/itemBack"
+        android:gravity="center|start"
+        android:textColor="#fff"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@id/itemBack"
+        android:layout_alignLeft="@id/itemBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/itemInfo"
+        android:textSize="12sp"
+        android:layout_below="@id/itemBack"
+        android:layout_marginTop="18dp"
+        android:layout_alignRight="@id/itemBack"
+        android:maxEms="10"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/itemBack"
+        android:text=""
+        android:textColor="#333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/btLike"
+        android:layout_alignTop="@id/userNick"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgLike"
+            android:src="@mipmap/like_grey"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+        <TextView
+            android:id="@+id/likeNum"
+            android:text="0"
+            android:textColor="#d8d8d8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:background="#f6f6f6"
+        android:layout_below="@id/itemInfo"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+    <ImageView
+        android:id="@+id/loc"
+        android:src="@mipmap/location"
+        android:layout_alignLeft="@id/itemInfo"
+        android:layout_below="@id/itemInfo"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvLoc"
+        android:textColor="#333"
+        android:textSize="12sp"
+        android:layout_marginBottom="-2dp"
+        android:layout_alignBottom="@id/loc"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/dis"
+        android:text="0.0km"
+        android:textColor="#333"
+        android:textSize="12sp"
+        android:layout_alignBottom="@id/tvLoc"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/loc"
+        android:layout_marginTop="10dp"
+        android:background="#fcfcfc"
+        android:layout_width="match_parent"
+        android:layout_height="6dp" />
+</RelativeLayout>

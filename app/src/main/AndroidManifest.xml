@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hulianhujia.spellway">
+
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 这个权限用于允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <!-- 这个权限用于允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 添加必要的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo3"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo3"
+        android:supportsRtl="true"
+        android:theme="@style/statusBarStyle"
+        tools:replace="android:icon,android:theme">
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1140170922178245#spellway" />
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.spellway.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 集成line客户端登录授权，需要添如下格式的过滤器 -->
+            <intent-filter>
+                <data android:scheme="line.1477692153" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="1f4152f059162" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="b55b060e4090e3e0ae116a2df7dac302" />
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="your AppId" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".activitys.LoginAty"
+            />
+        <activity android:name=".activitys.InitAty"
+            android:launchMode="singleInstance"/>
+        <receiver
+            android:name=".MyReciever"
+            android:enabled="true">
+            <intent-filter>
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.hulianhujia.spellway" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activitys.DiaryAty"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activitys.CommunityDetailAty"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity android:name=".activitys.GuiderDetailActivity" />
+        <activity android:name=".activitys.MyRedAty" />
+        <activity
+            android:name=".activitys.UserNewsAty"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activitys.MyOrderAty" />
+        <activity android:name=".activitys.MyFollowAty" />
+        <activity android:name=".activitys.MyColloctionAty" />
+        <activity android:name=".activitys.UserInfoAty" />
+        <activity android:name=".activitys.TestAty" />
+        <activity
+            android:name=".activitys.PubDiaryAty"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:name=".activitys.RegisAty" />
+        <activity android:name=".activitys.RegisUserAty" />
+        <activity android:name=".activitys.RegisGuiderAty" />
+        <activity android:name=".activitys.OtherUserInfoAty" />
+        <!-- 高德定图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="78634146e8a1d47b62e8e410f43cc716" />
+
+        <activity android:name=".activitys.guider.OrderDetailAty" />
+        <!-- 定位服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".activitys.guider.GuiderAty" />
+        <activity android:name=".activitys.guider.GuiderClientAty" />
+        <activity
+            android:name=".activitys.ChatAty"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activitys.guider.GetCashAty" />
+        <activity android:name=".activitys.TravelDiaryAty" />
+        <activity android:name=".activitys.MyInvitationAty" />
+        <activity android:name=".activitys.InviteWeChatAty" />
+        <activity
+            android:name=".activitys.CasualTalkAty"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".activitys.MyLoginAty" />
+        <activity android:name=".activitys.ChangeNickAty" />
+        <activity android:name=".activitys.ChangeAgeAty" />
+        <activity android:name=".activitys.ChangeHeightAty" />
+        <activity android:name=".activitys.ChangeWeightAty" />
+        <activity android:name=".activitys.ChangeLocAty" />
+        <activity android:name=".activitys.ChangeHobbyAty" />
+        <activity android:name=".activitys.ChangeMottoAty" />
+        <activity android:name=".activitys.guider.ChangeGPriceAty" />
+        <activity android:name=".activitys.guider.ChangeHPriceAty" />
+        <activity android:name=".activitys.OverOrderAty" />
+        <activity android:name=".activitys.GradeAty" />
+        <activity android:name=".MessageAty" />
+        <activity android:name=".activitys.OrderOverAty" />
+        <activity android:name=".activitys.SettingsAty" />
+        <activity android:name=".activitys.guider.GuidePhotosAty" />
+        <activity android:name=".activitys.guider.PhotoDetailAty" />
+        <activity android:name=".activitys.FilterAgeAty" />
+        <activity android:name=".activitys.GuideFilterAty" />
+        <activity android:name=".activitys.FilterSexAty" />
+        <activity android:name=".activitys.HomeFilterAty" />
+        <activity android:name=".activitys.NaviAty" />
+        <activity android:name=".activitys.NaviAty2" />
+        <activity android:name=".activitys.GuideFilterNewAty" />
+        <activity android:name=".activitys.guider.GuideMainAty"
+            />
+        <activity android:name=".activitys.guider.GuideSelfAty" />
+        <activity android:name=".activitys.WalletAty" />
+        <activity android:name=".activitys.ChargeAty" />
+        <activity
+            android:name=".activitys.NewRegisAty"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity android:name=".activitys.guider.GuideInfoAty" />
+        <activity android:name=".activitys.GetMoneyAty" />
+        <activity android:name=".activitys.guider.GuideWalletAty" />
+        <activity android:name=".activitys.guider.PubStyleAty" />
+        <activity android:name=".activitys.guider.GuideStyleAty" />
+        <activity android:name=".activitys.guider.ChangeSkillsAty" />
+        <activity android:name=".activitys.guider.ChangeIntroduceAty" />
+        <activity android:name=".activitys.ReportAty" />
+
+        <!-- 地图 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".activitys.InitAty2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activitys.SearchAty" />
+        <activity android:name=".activitys.AccountDetailAty" />
+        <activity android:name=".activitys.GradeAppAty" />
+        <activity android:name=".activitys.ForgetAty" />
+        <activity android:name=".activitys.ChooseRedAty"></activity>
+    </application>
+
+</manifest>

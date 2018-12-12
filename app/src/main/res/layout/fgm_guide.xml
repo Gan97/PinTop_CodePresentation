@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:text="导游"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/shouye_logo"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/btPub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="11dp"
+            android:src="@drawable/shouye_shaixuan" />
+    </RelativeLayout>
+    <TextView
+        android:background="#dbdbdb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        android:layout_below="@id/loTitle"
+        android:layout_above="@id/bottomBar"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        ptr:ptrAnimationStyle="flip"
+        android:paddingTop="8dp"
+        android:background="#f1f1f1"
+        ptr:ptrHeaderBackground="#f1f1f1"
+        ptr:ptrHeaderTextColor="#333"
+        android:id="@+id/gridView"
+        android:divider="@null"
+        android:numColumns="2"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

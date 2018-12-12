@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:background="#fff">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/commentUserIcon"
+        android:src="@mipmap/mamamiya"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="31dp"
+        android:layout_height="31dp" />
+    <TextView
+        android:id="@+id/commentUserName"
+        android:text="黄渤"
+        android:layout_marginTop="2dp"
+        android:textColor="#333"
+        android:layout_toRightOf="@id/commentUserIcon"
+        android:layout_alignTop="@id/commentUserIcon"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/commentContent"
+        android:textColor="#666666"
+        android:layout_marginTop="-7dp"
+        android:textSize="12sp"
+        android:text="土地是以它的肥沃和收获而被估价的；才能也是土地，不过它生产的不是粮食，而是真理。如果只能滋生瞑想和幻想的话，即使再大的才能也只是砂地或盐池，那上面连小草也长不出来的。 —— 别林斯基"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commentUserIcon"
+        android:layout_alignLeft="@+id/commentUserName"
+        android:layout_alignStart="@+id/commentUserName" />
+    <TextView
+        android:id="@+id/commentTime"
+        android:layout_marginRight="12dp"
+        android:text="2017.02.02"
+        android:textColor="#999999"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/commentUserIcon"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp" />
+    <TextView
+        android:background="#dbdbdb"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/commentContent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</RelativeLayout>

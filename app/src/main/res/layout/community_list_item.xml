@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+    <TextView
+        android:background="#f8f8f8"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <RelativeLayout
+        android:id="@+id/user_iv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+             />
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/userIcon"
+            android:textColor="#333"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tvHowLong"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/userName"
+            android:layout_alignLeft="@id/userName"
+            android:textColor="#999"
+            android:layout_marginTop="6dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_marginTop="10dp"
+        android:textColor="#333"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/nineGrideView"
+        android:paddingLeft="10dp"
+        app:ngv_gridSpacing="10dp"
+        app:ngv_singleImageSize="400dp"
+        app:ngv_singleImageRatio="1.78"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="4dp"
+        android:drawableLeft="@drawable/locationg"
+        android:textColor="#999"
+        android:textSize="10sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/btInvite"
+            android:layout_width="85dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="11dp"
+            android:gravity="center"
+            android:background="@drawable/buleboder"
+            android:drawableLeft="@drawable/invitation"
+            android:padding="5dp"
+            android:text="邀请旅游"
+            android:textColor="#666"
+            android:textSize="10sp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="1dp" />
+            <ImageView
+                android:id="@+id/btZan"
+                android:src="@drawable/like_red"
+                android:padding="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp" />
+            <ImageView
+                android:id="@+id/btTalk"
+                android:src="@drawable/comment_grey"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp" />
+            <ImageView
+                android:id="@+id/btShare"
+                android:src="@drawable/fenxiang"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.hulianhujia.spellway.customViews.MyListView
+        android:id="@+id/commentListView"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="10dp"
+        android:focusable="false"
+        android:dividerHeight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/btCheckMore"
+        android:visibility="gone"
+        android:background="#fff"
+        android:gravity="center"
+        android:textColor="#333"
+        android:text="查看更多"
+        android:textSize="12sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/btShow"
+            android:elevation="1dp"
+            android:layout_alignRight="@+id/etTalk"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <EditText
+            android:id="@+id/etTalk"
+            android:hint="评论"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            android:textColor="#333"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/btSend"
+            android:textColorHint="#999"
+            android:paddingLeft="10dp"
+            android:background="@drawable/talk_border"
+            android:layout_width="match_parent"
+            android:layout_height="27dp" />
+        <TextView
+            android:id="@+id/btSend"
+            android:text="评论"
+            android:visibility="gone"
+            android:textColor="#999"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="@drawable/gary_border"
+            android:layout_width="50dp"
+            android:layout_height="27dp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</LinearLayout>

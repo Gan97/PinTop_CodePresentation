@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:background="#fff">
+    <TextView
+        android:id="@+id/dv"
+        android:background="#f1f1f1"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="11dp" />
+    <RelativeLayout
+        android:id="@+id/backk"
+        android:layout_alignBottom="@+id/front"
+        android:layout_alignTop="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#F13E32"
+            android:text="删除"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_width="75dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/front"
+        android:background="#fff"
+        android:layout_below="@+id/dv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/lo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userIcon"
+                android:src="@mipmap/mamamiya"
+                app:civ_border_color="#dbdbdb"
+                app:civ_border_width="0.5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageView
+                android:id="@+id/userSex"
+                android:layout_alignBottom="@id/userIcon"
+                android:layout_alignRight="@id/userIcon"
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/name"
+            android:text="姓名:"
+            android:textColor="@color/zitiColor"
+            android:layout_toRightOf="@id/lo"
+            android:layout_alignTop="@id/lo"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/userName"
+            android:layout_toRightOf="@id/name"
+            android:layout_alignTop="@id/name"
+            android:textColor="@color/zitiColor"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/phone"
+            android:text="电话 :"
+            android:textColor="@color/zitiColor"
+            android:layout_alignBottom="@id/lo"
+            android:layout_alignLeft="@id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/userPhone"
+            android:text="8008208820"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/zitiColor"
+            android:layout_toRightOf="@id/phone"
+            android:layout_alignTop="@id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/btRefuse"
+            android:text="拒单"
+            android:textColor="#333"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btGetOrder"
+            android:background="@drawable/guide_jujue_border"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="58dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:id="@+id/btGetOrder"
+            android:text="接单"
+            android:layout_below="@id/dv2"
+            android:layout_marginTop="16dp"
+            android:textColor="#333"
+            android:textSize="15sp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/guide_jiedan_border"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:layout_width="58dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:id="@+id/btGot"
+            android:text="已接单"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@drawable/gotshape"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/btStarted"
+            android:text="开始旅行"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@drawable/gotshape"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/btWaitPay"
+            android:text="等待支付"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@drawable/gotshape"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/btOver"
+            android:text="已完成"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@drawable/getordershape"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tvState"
+            android:text="等待支付"
+            android:visibility="gone"
+            android:textColor="#FF7070"
+            android:textSize="12sp"
+            android:layout_alignBottom="@id/phone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/orderNum"
+        android:layout_marginRight="10dp"
+        android:textColor="#999"
+        android:textSize="12sp"
+        android:layout_below="@id/dv"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/bookTime"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@id/orderNum"
+        android:textSize="12sp"
+        android:textColor="#999"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/dv2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/orderNum"
+        android:background="@drawable/dv_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+</RelativeLayout>

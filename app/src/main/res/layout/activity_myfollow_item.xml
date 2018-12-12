@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#FFFFFF">
+    <RelativeLayout
+        android:id="@+id/lo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <ImageView
+            android:id="@+id/userSex"
+            android:elevation="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="12dp"
+            android:layout_height="12dp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/userName"
+        android:textColor="@color/zitiColor"
+        android:layout_toRightOf="@id/lo"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:layout_marginLeft="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/userMotto"
+        android:layout_below="@id/userName"
+        android:layout_marginTop="6dp"
+        android:layout_alignLeft="@+id/userName"
+        android:layout_toRightOf="@+id/lo"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:maxEms="15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:src="@mipmap/fanhui1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/lo"
+        android:layout_marginTop="20dp"
+        android:background="#f0f0f0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</RelativeLayout>

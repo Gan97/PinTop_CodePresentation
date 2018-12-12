@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.hulianhujia.spellway.activitys.RegisAty">
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/btExit"
+            android:src="@mipmap/fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="注册"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:background="#dbdbdb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:id="@+id/bottomlinear"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:background="#DCDCDC">
+        <Button
+            android:background="#fff"
+            android:id="@+id/btn_first"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="-5dp"
+            android:textSize="14sp"
+            android:text="普通用户注册"
+            />
+        <Button
+            android:background="#fff"
+            android:id="@+id/btn_second"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:text="导游用户注册"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/cursorarea"
+        android:layout_width="fill_parent"
+        android:background="#CDCDCD"
+        android:orientation="horizontal"
+        android:layout_height="2dp">
+        <ImageView
+            android:id="@+id/cursor_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        </ImageView>
+    </LinearLayout>
+
+    <TextView
+        android:background="#F1F1F1"
+        android:layout_width="match_parent"
+        android:layout_height="13dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/myviewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

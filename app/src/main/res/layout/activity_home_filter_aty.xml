@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.hulianhujia.spellway.activitys.HomeFilterAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:src="@mipmap/icon_back"
+            />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="筛选"
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvState"
+        android:text=""
+        android:textColor="#333"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/loTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvLoc"
+        android:text=""
+        android:textColor="#333"
+        android:gravity="center"
+        android:background="#FAEC5F"
+        android:textSize="12sp"
+        android:layout_below="@id/tvState"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="90dp"
+        android:layout_height="26dp" />
+    <TextView
+        android:id="@+id/dv1"
+        android:background="#f6f6f6"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/tvLoc"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+    
+    <TextView
+        android:id="@+id/tv2"
+        android:text="选择城市"
+        android:textColor="#333"
+        android:textSize="15sp"
+        android:layout_below="@id/dv1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/lo1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv2"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="@drawable/yellow_circle"
+            android:layout_gravity="center_vertical"
+            android:layout_width="5dp"
+            android:layout_height="5dp" />
+        <TextView
+            android:id="@+id/tvCity"
+            android:text="四川省，成都市"
+            android:textColor="#333"
+            android:textSize="12sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="4dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/btChooseLoc"
+        android:layout_width="90dp"
+        android:text="点击选择"
+        android:textSize="12sp"
+        android:background="@drawable/filter_bt"
+        android:layout_below="@id/tv2"
+        android:layout_toRightOf="@id/lo1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        android:textColor="#333"
+        android:gravity="center"
+        android:layout_height="26dp" />
+    <TextView
+        android:id="@+id/btClear"
+        android:layout_width="90dp"
+        android:text="取消"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:background="@drawable/filter_bt"
+        android:layout_below="@id/tv2"
+        android:layout_toRightOf="@id/btChooseLoc"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        android:textColor="#333"
+        android:gravity="center"
+        android:layout_height="26dp" />
+    <TextView
+        android:id="@+id/tv3"
+        android:text="选择标签"
+        android:textColor="#333"
+        android:textSize="15sp"
+        android:layout_below="@id/btChooseLoc"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <me.kaede.tagview.TagView
+        android:id="@+id/tagView"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@id/tv3"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></me.kaede.tagview.TagView>
+
+    <TextView
+        android:id="@+id/btCommit"
+        android:text="确定"
+        android:textColor="#333"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:background="@drawable/home_filter_commit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</RelativeLayout>

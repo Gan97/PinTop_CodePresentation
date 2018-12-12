@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F1F1F1"
+    android:layout_height="match_parent"
+    tools:context="com.hulianhujia.spellway.activitys.MyFollowAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:tint="#333"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:text="我的关注"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/shouye_logo"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_below="@id/loTitle"
+        android:background="#dbdbdb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <ListView
+        android:background="#fff"
+        android:id="@+id/listView"
+        android:divider="@null"
+        android:layout_below="@id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

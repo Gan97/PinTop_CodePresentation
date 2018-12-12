@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:paddingBottom="20dp"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+    <TextView
+        android:id="@+id/title"
+        android:text="设置时长费"
+        android:textColor="#333"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etMoney"
+        android:layout_below="@id/title"
+        android:inputType="numberDecimal"
+        android:background="#fff"
+        android:textColor="#333"
+        android:maxEms="6"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="31dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/etMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+        <TextView
+            android:id="@+id/btCancel"
+            android:background="@drawable/cancle_border"
+            android:text="取消"
+            android:gravity="center"
+            android:textColor="#333"
+            android:layout_width="120dp"
+            android:layout_height="35dp" />
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+        <TextView
+            android:id="@+id/btCommit"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="-13dp"
+            android:background="@drawable/yes_border"
+            android:text="确定"
+            android:gravity="center"
+            android:textColor="#333"
+            android:layout_width="120dp"
+            android:layout_height="35dp" />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+</RelativeLayout>

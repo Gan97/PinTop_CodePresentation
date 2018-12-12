@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.hulianhujia.spellway.activitys.guider.GuiderAty">
+    <RadioGroup
+        android:id="@+id/bottomBar"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+        <RadioButton
+            android:id="@+id/btOrder"
+            android:text="订单"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="#333"
+            android:checked="true"
+            android:drawableTop="@drawable/guide_rg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/btMyself"
+            android:text="我的"
+            android:button="@null"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:textColor="@drawable/guide_text"
+            android:drawableTop="@drawable/guide_rg2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/dv"
+        android:layout_above="@id/bottomBar"
+        android:background="@drawable/dv_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_above="@id/dv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

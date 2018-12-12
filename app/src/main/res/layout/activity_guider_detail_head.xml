@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:id="@+id/a"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/btExit"
+            android:src="@mipmap/arrow_left"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="导游介绍"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/location_iv"
+            android:src="@mipmap/fenxiang"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15sp"
+            android:layout_width="16dp"
+            android:layout_height="17dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@+id/a"
+        android:background="@drawable/dv_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</RelativeLayout>

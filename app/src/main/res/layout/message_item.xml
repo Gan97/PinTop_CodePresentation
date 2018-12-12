@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/itemIcon"
+        android:src="@drawable/xiaoxi"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/messageSource"
+        android:text="系统消息"
+        android:textColor="#333"
+        android:layout_toRightOf="@id/itemIcon"
+        android:layout_marginLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/messageContent"
+        android:layout_alignLeft="@id/messageSource"
+        android:layout_below="@id/messageSource"
+        android:textColor="#777"
+        android:layout_marginTop="7dp"
+        android:singleLine="true"
+        android:maxEms="18"
+        android:text="[系统通知]谢谢您使用本软件，本软件有更新啦..."
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/time"
+        android:text="2017-06-05"
+        android:textSize="9sp"
+        android:textColor="#999"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

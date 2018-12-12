@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+    <TextView
+        android:id="@+id/btM"
+        android:text="男"
+        android:clickable="true"
+        android:background="@drawable/change_sex_them"
+        android:textSize="14sp"
+        android:textColor="#333"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="49dp" />
+    <TextView
+        android:background="#dbdbdb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <TextView
+        android:id="@+id/btF"
+        android:text="女"
+        android:clickable="true"
+        android:background="@drawable/change_sex_them"
+        android:textColor="#333"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="49dp" />
+</LinearLayout>

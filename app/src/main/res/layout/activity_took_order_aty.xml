@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context="com.hulianhujia.spellway.activitys.guider.OrderDetailAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:src="@drawable/back"
+            />
+        <TextView
+            android:text="订单详情"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/shouye_logo"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="#f1f1f1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/dvi"
+                android:layout_width="match_parent"
+                android:layout_height="231dp" />
+            <com.hulianhujia.spellway.customViews.MapContainer
+                android:id="@+id/loContainer"
+                android:layout_width="match_parent"
+                android:layout_height="231dp">
+                <com.amap.api.maps.MapView
+                    android:id="@+id/mapView"
+                    android:background="#999"
+                    android:layout_width="match_parent"
+                    android:layout_height="231dp" />
+            </com.hulianhujia.spellway.customViews.MapContainer>
+            <RelativeLayout
+                android:elevation="5dp"
+                android:layout_below="@id/dvi"
+                android:background="#fff"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvinfo"
+                    android:textColor="#333"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvOrderNum"
+                    android:textColor="#999"
+                    android:textSize="12sp"
+                    android:layout_alignBottom="@id/tvinfo"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/dv11"
+                    android:background="#F0F0F0"
+                    android:layout_below="@id/tvOrderNum"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp" />
+                <TextView
+                    android:id="@+id/name"
+                    android:text="东东"
+                    android:textColor="#333"
+                    android:layout_below="@id/dv11"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/userPhone"
+                    android:layout_alignBottom="@id/name"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#333"
+                    android:drawableLeft="@drawable/telephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv12"
+                    android:text="导游费"
+                    android:textColor="#333"
+                    android:layout_below="@id/name"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/guiderPrice"
+                    android:textColor="#F45B5B"
+                    android:layout_alignBottom="@id/tv12"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv13"
+                    android:text="时长费"
+                    android:textColor="#333"
+                    android:layout_below="@id/tv12"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/guideHourPrice"
+                    android:textColor="#F45B5B"
+                    android:layout_alignBottom="@id/tv13"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv14"
+                    android:textColor="#333"
+                    android:layout_below="@id/tv13"
+                    android:layout_marginTop="20dp"
+                    android:text="订单状态"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvState"
+                    android:textColor="#333"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@id/tv14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!--准备-->
+                <RelativeLayout
+                    android:id="@+id/loReady"
+                    android:layout_below="@id/tvState"
+                    android:background="#fff"
+                    android:paddingTop="20dp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/btGo"
+                        android:text="导航前往"
+                        android:clickable="false"
+                        android:background="@drawable/send_shape_boring"
+                        android:textColor="#333"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp" />
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/btStart"
+                        android:text="开始旅行"
+                        android:layout_below="@id/btGo"
+                        android:background="@drawable/send_shape_borings"
+                        android:textColor="#333"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp" />
+                </RelativeLayout>
+
+                <!--时长-->
+                <RelativeLayout
+                    android:id="@+id/loRunning"
+                    android:visibility="gone"
+                    android:layout_below="@id/tvState"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <Chronometer
+                        android:id="@+id/time"
+                        android:text="03:59:56"
+                        android:textSize="24sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:textColor="#333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="旅行时长"
+                        android:layout_below="@id/time"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#333"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/btFinishTravel"
+                        android:layout_below="@id/time"
+                        android:layout_marginTop="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="完成旅行"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:background="@drawable/pinkshape"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp" />
+                </RelativeLayout>
+                <!--支付-->
+                <RelativeLayout
+                    android:id="@+id/loCost"
+                    android:layout_below="@id/tv14"
+                    android:background="#fff"
+                    android:layout_marginRight="-10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:text="游览时长"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/travel_Time"
+                        android:textColor="#333"
+                        android:layout_alignBottom="@id/tvTime"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:textColor="#333"
+                        android:layout_below="@id/tvTime"
+                        android:layout_marginTop="10dp"
+                        android:text="游览费用"
+                        android:drawablePadding="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/travelPrice"
+                        android:textColor="#333"
+                        android:layout_alignBottom="@id/tvPrice"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <RelativeLayout
+                        android:id="@+id/tv7"
+                        android:layout_below="@id/travelPrice"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="红包抵用"
+                            android:textColor="#333"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/red"
+                            android:text="未选择"
+                            android:textColor="#F6554A"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv8"
+                        android:text="实际费用"
+                        android:textColor="#333"
+                        android:layout_below="@id/tv7"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/realPay"
+                        android:text=""
+                        android:layout_marginRight="10dp"
+                        android:textSize="18sp"
+                        android:textColor="#F6554A"
+                        android:layout_alignBottom="@id/tv8"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/dv"
+                        android:background="#f0f0f0"
+                        android:layout_below="@id/tv8"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp" />
+                    <TextView
+                        android:id="@+id/guideState"
+                        android:text="等待支付"
+                        android:textSize="19sp"
+                        android:visibility="gone"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="30dp"
+                        android:textColor="#333"
+                        android:layout_below="@id/dv"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/loPay"
+                        android:layout_below="@id/dv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/loBank"
+                            android:background="#fff"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp">
+                            <ImageView
+                                android:id="@+id/img1"
+                                android:src="@mipmap/yu_e"
+                                android:layout_marginLeft="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tvtvtv"
+                                android:text="余额支付"
+                                android:textColor="#333"
+                                android:textSize="15sp"
+                                android:layout_toRightOf="@id/img1"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tvBank"
+                                android:textColor="#999"
+                                android:layout_alignLeft="@id/tvtvtv"
+                                android:layout_marginTop="4dp"
+                                android:layout_below="@id/tvtvtv"
+                                android:text="使用钱包余额支付"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:id="@+id/bankCheck"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:clickable="false"
+                                android:layout_marginRight="10dp"
+                                android:button="@null"
+                                android:checked="false"
+                                android:background="@drawable/check_style"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp" />
+                            <TextView
+                                android:background="#dbdbdb"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/loZFB"
+                            android:layout_below="@id/loBank"
+                            android:background="#fff"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp">
+                            <ImageView
+                                android:id="@+id/img"
+                                android:src="@mipmap/zhifubao"
+                                android:layout_marginLeft="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tvtv"
+                                android:text="支付宝支付"
+                                android:textColor="#333"
+                                android:textSize="15sp"
+                                android:layout_toRightOf="@id/img"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="#999"
+                                android:layout_alignLeft="@id/tvtv"
+                                android:layout_marginTop="4dp"
+                                android:layout_below="@id/tvtv"
+                                android:text="推荐所有支付宝账户"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:id="@+id/zfbCheck"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:clickable="false"
+                                android:layout_marginRight="10dp"
+                                android:button="@null"
+                                android:checked="true"
+                                android:background="@drawable/check_style"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp" />
+                            <TextView
+                                android:background="#dbdbdb"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp" />
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/dv1"
+                            android:background="#f0f0f0"
+                            android:layout_below="@id/loZFB"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp" />
+                        <RelativeLayout
+                            android:id="@+id/loWX"
+                            android:layout_below="@id/dv1"
+                            android:background="#fff"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp">
+                            <ImageView
+                                android:id="@+id/img2"
+                                android:src="@mipmap/weixin"
+                                android:layout_marginLeft="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tv3"
+                                android:text="微信支付"
+                                android:textColor="#333"
+                                android:textSize="15sp"
+                                android:layout_toRightOf="@id/img2"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="#999"
+                                android:layout_alignLeft="@id/tv3"
+                                android:layout_marginTop="4dp"
+                                android:layout_below="@id/tv3"
+                                android:text="推荐微信用户使用"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:id="@+id/wxCheck"
+                                android:clickable="false"
+                                android:button="@null"
+                                android:background="@drawable/check_style"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp" />
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/btConfrim"
+                            android:text="确认支付"
+                            android:layout_below="@id/loWX"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:textColor="#333"
+                            android:gravity="center"
+                            android:background="#FAEC5F"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/lo"
+                android:elevation="6dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dvi"
+                android:layout_marginTop="-30dp"
+                android:layout_width="51dp"
+                android:layout_height="51dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userIcon"
+                    android:layout_width="51dp"
+                    android:layout_height="51dp" />
+                <ImageView
+                    android:id="@+id/userSex"
+                    android:src="@mipmap/female"
+                    android:elevation="1dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/draw"
+                android:elevation="-1dp"
+                android:layout_marginLeft="-200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/border"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/head2portrait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userIcon2"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_alignLeft="@id/border"
+                    android:layout_alignTop="@id/border"
+                    android:layout_alignRight="@id/border"
+                    android:layout_alignBottom="@id/border"
+                    android:src="@mipmap/mamamiya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

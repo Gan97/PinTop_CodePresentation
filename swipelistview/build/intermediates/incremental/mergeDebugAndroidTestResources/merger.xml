@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="debug$Generated" generated="true"><source path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res"/></dataSet><dataSet config="main$Generated" generated="true"><source path="F:\DVP\spell_way\PinTu\swipelistview\src\androidTest\res"/><source path="F:\DVP\spell_way\PinTu\swipelistview\build\generated\res\rs\androidTest\debug"/><source path="F:\DVP\spell_way\PinTu\swipelistview\build\generated\res\resValues\androidTest\debug"/></dataSet><dataSet config="debug" from-dependency="true" generated-set="debug$Generated"><source path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res"><file name="ic_launcher" path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res\drawable-hdpi-v4\ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res\drawable-mdpi-v4\ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res\drawable-xhdpi-v4\ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res\drawable-xxhdpi-v4\ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res\values\values.xml" qualifiers=""><string name="app_name">swipelistview</string><style name="AppTheme" parent="AppBaseTheme">
+        
+    </style><declare-styleable name="SwipeListView"><attr format="boolean" name="swipeOpenOnLongPress"/><attr format="integer" name="swipeAnimationTime"/><attr format="dimension" name="swipeOffsetLeft"/><attr format="dimension" name="swipeOffsetRight"/><attr format="boolean" name="swipeCloseAllItemsWhenMoveList"/><attr format="reference" name="swipeFrontView"/><attr format="reference" name="swipeBackView"/><attr format="enum" name="swipeMode">
+            <enum name="none" value="0"/>
+            <enum name="both" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="left" value="3"/>
+        </attr><attr format="enum" name="swipeActionLeft">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr><attr format="enum" name="swipeActionRight">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr><attr format="reference" name="swipeDrawableChecked"/><attr format="reference" name="swipeDrawableUnchecked"/></declare-styleable><style name="AppBaseTheme" parent="android:Theme.Light">
+        
+    </style></file><file path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res\values-v11\values-v11.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        
+    </style></file><file path="F:\DVP\spell_way\PinTu\swipelistview\build\intermediates\bundles\debug\res\values-v14\values-v14.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        
+    </style></file></source></dataSet><dataSet config="main" generated-set="main$Generated"><source path="F:\DVP\spell_way\PinTu\swipelistview\src\androidTest\res"/><source path="F:\DVP\spell_way\PinTu\swipelistview\build\generated\res\rs\androidTest\debug"/><source path="F:\DVP\spell_way\PinTu\swipelistview\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SwipeListView"><attr format="boolean" name="swipeOpenOnLongPress"/><attr format="integer" name="swipeAnimationTime"/><attr format="dimension" name="swipeOffsetLeft"/><attr format="dimension" name="swipeOffsetRight"/><attr format="boolean" name="swipeCloseAllItemsWhenMoveList"/><attr format="reference" name="swipeFrontView"/><attr format="reference" name="swipeBackView"/><attr format="enum" name="swipeMode">
+            <enum name="none" value="0"/>
+            <enum name="both" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="left" value="3"/>
+        </attr><attr format="enum" name="swipeActionLeft">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr><attr format="enum" name="swipeActionRight">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr><attr format="reference" name="swipeDrawableChecked"/><attr format="reference" name="swipeDrawableUnchecked"/></declare-styleable></configuration></mergedItems></merger>

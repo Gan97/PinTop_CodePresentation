@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/loTitle"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/topbar">
+            <ImageView
+                android:id="@+id/btSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="11dp"
+                android:src="@mipmap/search"
+                 />
+            <ImageView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:layout_alignParentBottom="true"
+                android:src="@mipmap/shouye_logo"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/btFiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="11dp"
+                android:src="@mipmap/shouye_shaixuan" />
+        </RelativeLayout>
+
+        <TextView
+            android:background="#DBDBDB"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/homeListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                ptr:ptrAnimationStyle="flip"
+                android:divider="@null"
+                ptr:ptrHeaderBackground="#fff"
+                ptr:ptrHeaderTextColor="#333"
+                android:scrollbars="none"
+                android:background="#fff">
+            </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+        <TextView
+            android:background="#dbdbdb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:indicatorName="LineSpinFadeLoaderIndicator"
+        app:indicatorColor="#FF7070"
+        />
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="statusBarStyle" parent="Theme.AppCompat.NoActionBar">
+        <!--<item name="android:statusBarColor" tools:targetApi="lollipop">@color/white</item>-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+    <style name="ratingBarStyle" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/myratingbar</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxHeight">22dp</item>
+    </style>
+
+    <style name="ratingSBarStyle" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/myratingsbar</item>
+        <item name="android:minHeight">42px</item>
+        <item name="android:maxHeight">21dp</item>
+
+    </style>
+    <style name="ratingSSBarStyle" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/myratingssbar</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxHeight">9dp</item>
+    </style>
+
+    <!--底部导航栏-->
+    <style name="tab_menu_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!--dialog-->
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- Navigation Header -->
+    <style name="NavPage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <!-- <item name="android:background">@drawable/nav_page</item> -->
+        <item name="android:background">@color/navpage</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop</item>
+        <item name="android:windowExitAnimation">@anim/pop2</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <!-- 第一个是dialog的背景色，当然你可以设置图片，不拦大家 -->
+        <item name="android:background">@color/white</item>
+        <!-- 第二个就是弹出dialog后，下面的activity层的颜色啦-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--这里设置为没有标题栏，如果这里不设置的话，你会发现无论布局怎么改都会出现多一栏白色 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+    </style>
+</resources>

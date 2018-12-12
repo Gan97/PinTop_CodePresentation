@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/y"
+            android:background="#FAEC5F"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="2dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:text="评论"
+            android:layout_toRightOf="@id/y"
+            android:layout_marginLeft="10dp"
+            android:textColor="#333"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/like_num"
+            android:layout_toLeftOf="@+id/talk_num"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@drawable/like_grey"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <ImageView
+                android:id="@+id/imgZan"
+                android:src="@drawable/like_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvNum"
+                android:textColor="#666"
+                android:text="0"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/talk_num"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/comment_grey"
+            android:layout_centerVertical="true"
+            android:textColor="#666"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

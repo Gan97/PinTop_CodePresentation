@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f1f1f1"
+    android:layout_height="match_parent"
+    tools:context="com.hulianhujia.spellway.activitys.SearchAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:tint="#333"
+            android:src="@mipmap/back"
+            />
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="10dp"
+            android:hint="请输入要搜索的标题或者作者"
+            android:drawableLeft="@mipmap/search"
+            android:textColorHint="#999"
+            android:layout_marginBottom="8dp"
+            android:textColor="#333"
+            android:drawablePadding="5dp"
+            android:textSize="12sp"
+            android:background="@drawable/searchborder"
+            android:layout_width="250dp"
+            android:layout_height="28dp" />
+        <TextView
+            android:id="@+id/btSearch"
+            android:text="搜索"
+            android:textColor="#333"
+            android:padding="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/btClear"
+            android:layout_alignBottom="@id/etSearch"
+            android:layout_alignRight="@id/etSearch"
+            android:visibility="gone"
+            android:src="@mipmap/delet"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="15dp"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.hulianhujia.spellway.activitys.RegisGuiderAty">
+
+    <RelativeLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15sp"
+            android:src="@mipmap/arrow_left" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btExit"
+            android:layout_centerHorizontal="true"
+            android:text="注册导游"
+            android:textColor="#333"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dv1"
+        android:layout_below="@id/a"
+        android:background="#dbdbdb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/dv1"
+
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="5dp"
+            android:text="手 机 号 :"
+            android:textColor="@color/zitiColor"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/send_shape"
+            android:hint="填写手机号"
+            android:inputType="phone"
+            android:paddingLeft="10dp"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/dv1"
+
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+        <TextView
+            android:text="密      码 :"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/zitiColor"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etPwd"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/send_shape"
+            android:hint="填写用户密码"
+            android:textSize="13sp"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/dv1"
+
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+        <TextView
+            android:text="重复密码 :"
+            android:paddingRight="8dp"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/zitiColor"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+        <EditText
+            android:id="@+id/etPwdTwice"
+            android:inputType="textPassword"
+            android:textSize="13sp"
+            android:hint="重复用户密码"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/send_shape"
+            android:layout_width="220dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_below="@id/dv1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="身份证 :"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/zitiColor"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/btIdCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:src="@mipmap/add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="导游证 :"
+            android:textColor="@color/zitiColor"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/btGuideCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:src="@mipmap/add" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_below="@id/dv1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="5dp"
+            android:text="验 证 码 :"
+            android:textColor="@color/zitiColor" />
+
+        <EditText
+            android:id="@+id/etYzm"
+            android:layout_width="115dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/send_shape"
+            android:hint="填写短信码"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/btSend"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="38dp"
+            android:background="@drawable/send_shape"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:text="59s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/dv1"
+
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+        <TextView
+            android:text="校验码 :"
+            android:textColor="@color/zitiColor"
+            android:paddingTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <EditText
+            android:id="@+id/etJym"
+            android:layout_width="115dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/send_shape"
+            android:hint="填写验证码"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="38dp"
+            android:background="@drawable/send_shape_bg"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:text="HSBC" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="294dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/send_shape"
+            android:gravity="center"
+            android:text="提交注册" />
+
+    </LinearLayout>
+
+</LinearLayout>

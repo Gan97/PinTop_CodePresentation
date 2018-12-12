@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    tools:context="com.hulianhujia.spellway.activitys.MyOrderAty">
+    <RelativeLayout
+        android:id="@+id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/topbar">
+        <ImageView
+            android:id="@+id/btExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="11dp"
+            android:tint="#333"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:text="我的订单"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/shouye_logo"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/spView"
+        android:layout_below="@id/loTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.fortysevendeg.swipelistview.SwipeListView
+            android:background="#fff"
+            android:id="@+id/listView"
+            swipe:swipeActionLeft="reveal"
+            app:swipeFrontView="@+id/front"
+            android:scrollbars="none"
+            swipe:swipeBackView="@+id/backk"
+            swipe:swipeMode="left"
+            app:swipeOffsetLeft="290dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.liaoinstan.springview.widget.SpringView>
+
+</RelativeLayout>

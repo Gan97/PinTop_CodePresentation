@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hulianhujia.spellway.activitys.InitAty">
+
+    <ImageView
+        android:id="@+id/bgImg"
+        android:src="@drawable/bg"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:src="@drawable/logo4"
+        android:layout_marginTop="105dp"
+        android:alpha="0.8"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/btLogin"
+        android:text="登陆"
+        android:gravity="center"
+        android:clickable="true"
+        android:padding="5dp"
+        android:background="@drawable/login_shape"
+        android:alpha="0.8"
+        android:layout_width="270dp"
+        android:textSize="15sp"
+        android:textColor="#333"
+        android:layout_height="46dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360dp" />
+    <TextView
+        android:id="@+id/btRegis"
+        android:text="注册"
+        android:gravity="center"
+        android:clickable="true"
+        android:textColor="#fff"
+        android:padding="5dp"
+        android:background="@drawable/init_selector"
+        android:layout_width="271dp"
+        android:textSize="15sp"
+        android:layout_height="46dp"
+        android:layout_below="@+id/btLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

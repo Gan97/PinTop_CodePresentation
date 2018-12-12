@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hulianhujia.spellway.activitys.OrderOverAty">
+    <RelativeLayout
+        android:id="@+id/a"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/btExit"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="评价"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lo"
+        android:layout_below="@id/a"
+        android:background="#fff"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_useless_other"
+            android:background="#F1F1F1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <RelativeLayout
+            android:id="@+id/iconLo"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="18dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/guiderIcon"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@mipmap/mamamiya" />
+
+            <ImageView
+                android:id="@+id/guiderSex"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/gerenxinxi_nv" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:text="东东"
+            android:textColor="#333"
+            android:textSize="15sp"
+            android:layout_alignTop="@+id/iconLo"
+            android:layout_toRightOf="@+id/iconLo"
+            android:layout_toEndOf="@+id/iconLo"
+            android:layout_marginStart="13dp" />
+
+        <TextView
+            android:id="@+id/guiderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/name"
+            android:layout_marginTop="1dp"
+            android:text="25"
+            android:textColor="#333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name"
+            android:layout_below="@id/name"
+            android:layout_marginTop="6dp"
+            android:text="导游费 :"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/guiderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/price"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/price"
+            android:text="￥100.00"
+            android:textColor="#FF0000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/hourPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name"
+            android:layout_below="@id/price"
+            android:layout_marginTop="2dp"
+            android:text="时长费 :"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/guiderHourPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/hourPrice"
+            android:layout_alignLeft="@id/guiderPrice"
+            android:text="￥40.00"
+            android:layout_marginLeft="4dp"
+            android:textColor="#FF0000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView_useless_other"
+            android:layout_width="6dp"
+            android:layout_height="10dp"
+            android:layout_alignLeft="@+id/iconLo"
+            android:layout_alignStart="@+id/iconLo"
+            android:layout_below="@+id/iconLo"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/jinpai" />
+
+
+        <TextView
+            android:id="@+id/guiderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iconLo"
+            android:layout_alignStart="@+id/iconLo"
+            android:layout_below="@+id/iconLo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="金牌导游"
+            android:textColor="#FF6C00"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/btGrade"
+            android:text="评价"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:background="@drawable/grade_bt"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/name"
+            android:layout_marginRight="15dp"
+            android:layout_width="60dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/dv"
+            android:background="#dbdbdb"
+            android:layout_below="@id/guiderType"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+        <TextView
+            android:id="@+id/orderState"
+            android:text="订单完成"
+            android:textColor="#3C9A22"
+            android:textSize="12sp"
+            android:layout_alignLeft="@id/imageView_useless_other"
+            android:layout_below="@id/dv"
+            android:layout_marginTop="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/orderNum"
+            android:text="订单号：201706165325"
+            android:textColor="#999"
+            android:textSize="12sp"
+            android:layout_alignBottom="@id/orderState"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/dv2"
+            android:background="#dbdbdb"
+            android:layout_below="@id/orderNum"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+        <TextView
+            android:id="@+id/tv1"
+            android:text="游览时长"
+            android:textColor="#333"
+            android:drawableLeft="@mipmap/dingdan_shijian"
+            android:drawablePadding="5dp"
+            android:textSize="14sp"
+            android:layout_below="@id/dv2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/time"
+            android:textColor="#FF0000"
+            android:text="3小时20分"
+            android:layout_alignBottom="@id/tv1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv2"
+            android:text="游览费用"
+            android:textColor="#333"
+            android:drawableLeft="@drawable/dingdan_fenyong"
+            android:drawablePadding="5dp"
+            android:layout_alignLeft="@id/tv1"
+            android:layout_below="@id/tv1"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvPrice"
+            android:textColor="#FF0000"
+            android:text="￥360.00"
+            android:layout_alignLeft="@id/time"
+            android:layout_below="@id/time"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>
